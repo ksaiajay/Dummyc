@@ -8,7 +8,9 @@ export default class demoService extends cds.ApplicationService{
 
         this.on('READ',purchaseOrder, async(req) => {
             var response = await purchaseOrderConnect.tx(req).run(req.query);
+            
             return response;
+
         });
 
         this.on('READ',companyCode, async(req) => {
